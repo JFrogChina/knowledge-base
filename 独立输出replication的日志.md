@@ -1,7 +1,8 @@
 
 配置Artifactory logback.xml
+
 把下面配置贴入配置文件中
-cd $JFROG_HOME/var/etc/artifactory/
+$JFROG_HOME/var/etc/artifactory/logback.xml
 
 ![replication-logback.xml](images/logback.jpg)
 

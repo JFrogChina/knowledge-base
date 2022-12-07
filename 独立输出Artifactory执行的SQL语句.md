@@ -8,14 +8,14 @@ $JFROG_HOME/var/etc/artifactory/logback.xml
 
 ```xml
     <appender name="db" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.dir}/db-minitor.log</File><!--db独立log文件名-->
+        <File>${log.dir}/db-monitor.log</File><!--db独立log文件名-->
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="org.jfrog.common.logging.logback.layout.BackTracePatternLayout">
                 <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSS, UTC}Z %boldGreen([jfrt ]) %highlight([%-5p]) [%-16X{uber-trace-id}] [%-30.30(%c{3}:%L)] [%-20.20thread] - %m%n</pattern>
             </layout>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <FileNamePattern>${log.dir.archived}/db-minitor.%i.log</FileNamePattern>
+            <FileNamePattern>${log.dir.archived}/db-monitor.%i.log</FileNamePattern>
             <maxIndex>13</maxIndex>
         </rollingPolicy>
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
